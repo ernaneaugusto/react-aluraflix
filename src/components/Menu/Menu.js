@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Logo from './../../assets/images/aluraflix-logo.png';
 import './Menu.css';
 import ButtonLink from '../ButtonLink/ButtonLink';
@@ -6,11 +7,11 @@ import ButtonLink from '../ButtonLink/ButtonLink';
 const Menu = () => {
     return (
         <header className='Menu'>
-            <a href='/' title='Home Aluraflix'>
+            <Link to='/' title='Home Aluraflix'>
                 <img src={Logo} className='Logo' alt='Logo Aluraflix' title='Aluraflix' />
-            </a>
+            </Link>
 
-            <ButtonLink text='Novo vídeo' href='/' className='ButtonLink' />
+            <ButtonLink text='Novo vídeo' to='/cadastro/video' className='ButtonLink' />
         </header>
     )
 }
